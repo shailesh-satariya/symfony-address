@@ -1,0 +1,16 @@
+App\Entity\Address:
+  properties:
+    firstname:
+      - NotBlank: ~
+    lastname:
+      - NotBlank: ~
+    email:
+      - Email:
+         message: The email "{{ value }}" is not a valid email.
+    birthday:
+      - Date: ~
+    file:
+      - File:
+          maxSize: 1024k
+          mimeTypes: [image/jpeg, image/png]
+          mimeTypesMessage: Please upload a valid image
